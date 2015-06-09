@@ -1,9 +1,9 @@
 {
-    "name": "my-repo",
+    "name": "no-webcomponents",
     "version": "0.0.0",
-    "description": "My awesome Custom Element",
+    "description": "An element that only displays when web components are unsupported.",
     "license": "MIT",
-    "main": "my-element.html",
+    "main": "no-webcomponents.html",
     "keywords": [
         "polymer",
         "web-components"

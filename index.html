@@ -9,13 +9,24 @@
     <script src="../webcomponentsjs/webcomponents-lite.min.js"></script>
 
     <!-- Imports custom element -->
-    <link rel="import" href="my-element.html">
-
+    <link rel="import" href="no-webcomponents.html">
+    <style>
+        body[unresolved] *:not(no-webcomponents) {
+            display: none;
+        }
+    </style>
 </head>
-<body>
+<body unresolved>
+    <!-- Only displayed if webcomponents are supported. -->
+    <div>
+        Web components for the app would go here, the inline style above ensures that
+        only no-webcomponents is shown if webcomponents are not supported.
+    </div>
 
-    <!-- Runs custom element -->
-    <my-element></my-element>
-
+    <!-- Only displayed if webcomponents are not supported. -->
+    <no-webcomponents>
+        This browser does not support webcomponents.  Standard HTML elements can be
+        used here.
+    </no-webcomponents>
 </body>
 </html>
