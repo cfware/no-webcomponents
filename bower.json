@@ -4,7 +4,7 @@
     "description": "An element that only displays when web components are unsupported.",
     "license": "MIT",
     "authors": [
-        { "name": "Corey Farrell", "email": "git@cfware.com" },
+        { "name": "Corey Farrell", "email": "git@cfware.com" }
     ],
     "main": "no-webcomponents.html",
     "keywords": [
