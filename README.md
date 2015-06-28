@@ -5,7 +5,7 @@
 Install the component using [Bower](http://bower.io/):
 
 ```sh
-$ bower install coreyfarrell/no-webcomponents --save
+$ bower install no-webcomponents --save
 ```
 
 ## Usage
