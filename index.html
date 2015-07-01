@@ -11,14 +11,14 @@
     <!-- Imports custom element -->
     <link rel="import" href="bower_components/no-webcomponents/no-webcomponents.html">
     <style>
-        body[unresolved] > *:not(no-webcomponents) {
+        body[unresolved] > .myappclass {
             display: none;
         }
     </style>
 </head>
 <body unresolved>
     <!-- Only displayed if webcomponents are supported. -->
-    <div>
+    <div class="myappclass">
         Web components for the app would go here, the inline style above ensures that
         this only displays when webcomponents are supported.
         <br/>
