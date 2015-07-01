@@ -1,6 +1,6 @@
 {
     "name": "no-webcomponents",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "An element that only displays when web components are unsupported.",
     "license": "MIT",
     "authors": [
