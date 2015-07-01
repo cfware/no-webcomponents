@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <title>&lt;no-webcomponents&gt;</title>
+
+    <!-- Imports polyfill -->
+    <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+
+    <!-- Imports custom element -->
+    <link rel="import" href="no-webcomponents.html">
+    <style>
+        body[unresolved] *:not(no-webcomponents) {
+            display: none;
+        }
+    </style>
+</head>
+<body unresolved>
+    <!-- Only displayed if webcomponents are supported. -->
+    <div>
+        Web components for the app would go here, the inline style above ensures that
+        this only displays when webcomponents are supported.
+    </div>
+
+    <!-- Only displayed if webcomponents are not supported. -->
+    <no-webcomponents>
+        <script type="text/javascript">
+            if (!('registerElement' in document && 'content' in document.createElement('template'))) {
+                /*
+                 * no-webcomponents only hides the elements contained.  Scripts for
+                 * unsupported browsers need to be protected by a check to prevent
+                 * running on browsers that support webcomponents.
+                 */
+                document.title = 'no-webcomponents - Unsupported browser detected!';
+            }
+        </script>
+        This browser does not support webcomponents.  Standard HTML elements can be
+        used here to direct the user to IT support or to browser download sites.
+    </no-webcomponents>
+</body>
+</html>
