@@ -1,21 +1,25 @@
-<!-- Imports polymer -->
-<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="../polymer/lib/utils/unresolved.html">
 
-<!-- Defines element markup -->
 <dom-module id="no-webcomponents">
-    <style>
-        :host {
-          display: none;
-        }
-    </style>
-    <template>
-        <content id="content"></content>
-    </template>
+	<template>
+		<style>
+			:host {
+				display: none;
+			}
+		</style>
+	</template>
+
+	<script>
+		(function() {
+			'use strict';
+
+			class NoWebcomponents extends Polymer.Element {
+				static get is() { return 'no-webcomponents'; }
+			}
+
+			window.customElements.define(NoWebcomponents.is, NoWebcomponents);
+		})();
+	</script>
 </dom-module>
 
-<!-- Registers custom element -->
-<script>
-    Polymer({
-        is: 'no-webcomponents',
-    });
-</script>

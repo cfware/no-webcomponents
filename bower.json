@@ -1,6 +1,6 @@
 {
     "name": "no-webcomponents",
-    "version": "1.0.1",
+    "version": "2.0.0",
     "description": "An element that only displays when web components are unsupported.",
     "license": "MIT",
     "authors": [
@@ -16,7 +16,7 @@
         "bower_components"
     ],
     "dependencies": {
-        "polymer": "Polymer/polymer#^1.0.0"
+        "polymer": "Polymer/polymer#^2.0.0"
     },
     "repository": {
       "type": "git",
