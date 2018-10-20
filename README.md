@@ -24,6 +24,6 @@ See [gh-pages] [(source)] for a demo usage of this element.
 [npm-url]: https://npmjs.org/package/no-webcomponents
 [downloads-image]: https://img.shields.io/npm/dm/no-webcomponents.svg
 [downloads-url]: https://npmjs.org/package/no-webcomponents
-[license-image]: https://img.shields.io/npm/l/:no-webcomponents.svg
+[license-image]: https://img.shields.io/npm/l/no-webcomponents.svg
 [gh-pages]: http://cfware.github.io/no-webcomponents/
 [(source)]: https://github.com/cfware/no-webcomponents/tree/gh-pages
