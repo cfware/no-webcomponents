@@ -1,43 +1,47 @@
 <!doctype html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<title>&lt;no-webcomponents&gt;</title>
 
-    <meta charset="utf-8">
-    <title>&lt;no-webcomponents&gt;</title>
-
-    <!-- Imports custom element -->
-    <link rel="import" href="bower_components/no-webcomponents/no-webcomponents.html">
-    <style>
-        body[unresolved] > .myappclass {
-            display: none;
-        }
-    </style>
+	<!-- Imports custom element -->
+	<script type="module" href="node_modules/no-webcomponents/index.js"></script>
+	<link rel="stylesheet" href="node_modules/no-webcomponents/index.css">
 </head>
 <body unresolved>
-    <!-- Only displayed if webcomponents are supported. -->
-    <div class="myappclass">
-        Web components for the app would go here, the inline style above ensures that
-        this only displays when webcomponents are supported.
-        <br/>
-        <a href="index.html">Try with webcomponents polyfill.</a>
-    </div>
+	<!-- Only displayed if webcomponents are supported. -->
+	<div>
+		Web components for the app would go here, the inline style above ensures that
+		this only displays when webcomponents are supported.
+		<br/>
+		<a href="index.html">Try with webcomponents polyfill.</a>
+	</div>
 
-    <!-- Only displayed if webcomponents are not supported. -->
-    <no-webcomponents>
-        <script type="text/javascript">
-            if (!('registerElement' in document && 'content' in document.createElement('template'))) {
-                /*
-                 * no-webcomponents only hides the elements contained.  Scripts for
-                 * unsupported browsers need to be protected by a check to prevent
-                 * running on browsers that support webcomponents.
-                 */
-                document.title = 'no-webcomponents - Unsupported browser detected!';
-            }
-        </script>
-        This browser does not support webcomponents.  Standard HTML elements can be
-        used here to direct the user to IT support or to browser download sites.
-        <br/>
-        <a href="index.html">Try with webcomponents polyfill.</a>
-    </no-webcomponents>
+	<!-- Only displayed if webcomponents are not supported. -->
+	<no-webcomponents>
+		<!--
+			no-webcomponents only hides the elements contained.  Scripts for
+			unsupported browsers need to be protected by a check to prevent
+			running on browsers that support webcomponents.  The following
+			shows using no-webcomponents for this check in an ES module
+			environment, with a nomodule fallback for other browsers.
+		-->
+		<script type="module">
+			import supported from './node_modules/no-webcomponents/index.js';
+
+			if (!supported) {
+				document.title = document.title + ' - Unsupported browser detected (ES module mode)!';
+			}
+		</script>
+		<script type="text/javascript" nomodule>
+			if (!window.customElements || !document.body.attachShadow) {
+				document.title = document.title + ' - Unsupported browser detected (no ES modules)!';
+			}
+		</script>
+		This browser does not support webcomponents.  Standard HTML elements can be
+		used here to direct the user to IT support or to browser download sites.
+		<br/>
+		<a href="index.html">Try with webcomponents polyfill.</a>
+	</no-webcomponents>
 </body>
 </html>

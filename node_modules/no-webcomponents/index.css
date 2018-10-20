@@ -1,0 +1,7 @@
+body[unresolved] > * {
+	display: none;
+}
+
+body[unresolved] > no-webcomponents {
+	display: block!important;
+}
