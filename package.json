@@ -1,0 +1,23 @@
+{
+	"name": "no-webcomponents",
+	"version": "3.0.0",
+	"description": "Self-hiding custom element used to display an error if custom elements are not supported.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:cfware/no-webcomponents"
+	},
+	"keywords": [
+		"webcomponents",
+		"no-webcomponents"
+	],
+	"author": "Corey Farrell",
+	"license": "MIT",
+	"files": [
+		"index.js",
+		"index.css"
+	]
+}

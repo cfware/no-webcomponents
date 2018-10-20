@@ -1,59 +1,29 @@
-# &lt;no-webcomponents&gt;
+# no-webcomponents
+
+[![NPM Version][npm-image]][npm-url]
+[![NPM Downloads][downloads-image]][downloads-url]
+[![MIT][license-image]](LICENSE)
+
+Self-hiding custom element used to display an error if custom elements are not supported.
+
+This takes advantage of the fact that legacy browsers treat unknown tags the same as a
+`<div>`.  This means that without polyfills those browsers will display the contents of
+`<no-webcomponents>`.  When custom elements and shadow dom v1 are supported it is hidden.
 
 ## Install
 
-Install the component using [Bower](http://bower.io/):
-
 ```sh
-$ bower install no-webcomponents --save
+$ npm install no-webcomponents
 ```
 
 ## Usage
 
-1. Import polyfill:
+See [gh-pages] [(source)] for a demo usage of this element.
 
-    ```html
-    <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
-    ```
-
-2. Import custom element:
-
-    ```html
-    <link rel="import" href="bower_components/no-webcomponents/no-webcomponents.html">
-    ```
-
-3. Start using it!
-
-    ```html
-    <no-webcomponents>Your browser is not supported.</no-webcomponents>
-    ```
-
-## Development
-
-In order to test it locally you'll need to fetch some dependencies and a basic server setup.
-
-1. Install [bower](http://bower.io/) & [polyserve](https://npmjs.com/polyserve):
-
-    ```sh
-    $ npm install -g bower polyserve
-    ```
-
-2. Install local dependencies:
-
-    ```sh
-    $ bower install
-    ```
-
-3. Start development server and open `http://localhost:8080/components/no-webcomponents/`.
-
-    ```sh
-    $ polyserve
-    ```
-
-## History
-
-For detailed changelog, check [Releases](https://github.com/coreyfarrell/no-webcomponents/releases).
-
-## License
-
-[MIT License](http://opensource.org/licenses/MIT)
+[npm-image]: https://img.shields.io/npm/v/no-webcomponents.svg
+[npm-url]: https://npmjs.org/package/no-webcomponents
+[downloads-image]: https://img.shields.io/npm/dm/no-webcomponents.svg
+[downloads-url]: https://npmjs.org/package/no-webcomponents
+[license-image]: https://img.shields.io/npm/l/:no-webcomponents.svg
+[gh-pages]: http://cfware.github.io/no-webcomponents/
+[(source)]: https://github.com/cfware/no-webcomponents/tree/gh-pages
